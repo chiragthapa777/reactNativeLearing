@@ -12,73 +12,37 @@ import {
 } from 'react-native';
 
 const App = () => {
-  const [items, setItems] = useState([
-    {id: '1', name: 'chirag'},
-    {id: '2', name: 'ram'},
-    {id: '3', name: 'meera'},
-    {id: '4', name: 'purnima'},
-    {id: '5', name: 'sita'},
-    {id: '6', name: 'gita'},
-  ]);
-  const [laoding, setloading] = useState(false);
-  const handleRefresh = () => {
-    setloading(true);
-    setTimeout(() => {
-      setItems([
-        ...items,
-        {id: '7', name: 'hari'},
-        {id: '8', name: 'shyam'},
-        {id: '9', name: 'john'},
-        {id: '10', name: 'michale'},
-        {id: '11', name: 'richard'},
-        {id: '12', name: 'joey'},
-      ]);
-      setloading(false);
-    }, 3000);
-  };
+  const [name, setname] = useState('');
+  console.log(name);
+
   return (
-    <FlatList
-      data={items}
-      refreshControl={
-        <RefreshControl
-          refreshing={laoding}
-          onRefresh={handleRefresh}
-          colors={['blue']}
-        />
-      }
-      style={styles.body}
-      renderItem={({item}) => (
-        <View style={styles.item} key={item.id}>
-          <Text style={styles.text}>{item.name}</Text>
-        </View>
-      )}
-    />
-    // <ScrollView
-    //   style={styles.body}
-    // refreshControl={
-    //   <RefreshControl
-    //     refreshing={laoding}
-    //     onRefresh={handleRefresh}
-    //     colors={['blue']}
-    //   />
-    //   }>
-    //   {items.length > 0 &&
-    //     items.map(item => (
-    // <View style={styles.item} key={item.id}>
-    //   <Text style={styles.text}>{item.name}</Text>
-    // </View>
-    //     ))}
-    // </ScrollView>
+    <View style={styles.body}>
+      <Text style={styles.text}> Enter Name : </Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Name"
+        value={name}
+        onChangeText={val => {
+          setname(val);
+        }}
+      />
+      <Text style={styles.text}> Name is : {name} </Text>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: 'red',
+    padding: 10,
   },
   text: {
-    fontSize: 35,
+    fontSize: 18,
+  },
+  input: {
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 15,
   },
   item: {
     alignItems: 'center',
