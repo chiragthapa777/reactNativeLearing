@@ -62,7 +62,7 @@ const AppDrawer = () => {
           name="ScreenB"
           component={ScreenB}
           options={{
-            title: 'Screen_A Title',
+            title: 'Screen_B Title',
             drawerIcon: ({focused}) => (
               <MaterialCommunityIcons
                 name="alpha-b-circle"
@@ -71,6 +71,7 @@ const AppDrawer = () => {
               />
             ),
           }}
+          initialParams={{id: 1, name: 'from drawer'}}
         />
       </Drawer.Navigator>
     </NavigationContainer>

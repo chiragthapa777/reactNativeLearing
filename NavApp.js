@@ -48,18 +48,18 @@ const NavApp = () => {
   //     <NavigationContainer>
   //       <Tab.Navigator
   //         screenOptions={({route}) => ({
-            // tabBarIcon: ({focused, size, color}) => {
-            //   let iconName;
-            //   if (route.name === 'ScreenA') {
-            //     iconName = 'alpha-a-circle';
-            //     color = focused ? 'blue' : 'black';
-            //   } else if (route.name === 'ScreenB') {
-            //     color = focused ? 'blue' : 'black';
-            //     iconName = 'alpha-b-circle';
-            //   }
-            //   return (
-            //     <MaterialCommunityIcons name={iconName} size={25} color={color} />
-            //   );
+  // tabBarIcon: ({focused, size, color}) => {
+  //   let iconName;
+  //   if (route.name === 'ScreenA') {
+  //     iconName = 'alpha-a-circle';
+  //     color = focused ? 'blue' : 'black';
+  //   } else if (route.name === 'ScreenB') {
+  //     color = focused ? 'blue' : 'black';
+  //     iconName = 'alpha-b-circle';
+  //   }
+  //   return (
+  //     <MaterialCommunityIcons name={iconName} size={25} color={color} />
+  //   );
   //           },
   //           tabBarActiveTintColor: '#555',
   //           tabBarInactiveTintColor: '#f0f',
