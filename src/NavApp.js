@@ -11,9 +11,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import {Form} from './components/Form';
-import ScreenA from './components/ScreenA';
-import ScreenB from './components/ScreenB';
+// import {Form} from '../components/Form';
+// import ScreenA from '../components/ScreenA';
+// import ScreenB from '../components/ScreenB';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
@@ -77,18 +77,18 @@ const NavApp = () => {
   //     </NavigationContainer>
   //   );
   // };
-  return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Screen_A" drawerPosition="left">
-        <Drawer.Screen
-          name="ScreenA"
-          component={ScreenA}
-          // options={{tabBarBadge: 3}}
-        />
-        <Drawer.Screen name="ScreenB" component={ScreenB} />
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
+  // return (
+  //   <NavigationContainer>
+  //     <Drawer.Navigator initialRouteName="Screen_A" drawerPosition="left">
+  //       <Drawer.Screen
+  //         name="ScreenA"
+  //         component={ScreenA}
+  //         // options={{tabBarBadge: 3}}
+  //       />
+  //       <Drawer.Screen name="ScreenB" component={ScreenB} />
+  //     </Drawer.Navigator>
+  //   </NavigationContainer>
+  // );
 };
 
 const styles = StyleSheet.create({

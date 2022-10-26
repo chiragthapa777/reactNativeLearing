@@ -7,6 +7,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import {GlobalStyles} from '../utils/GlobalStyles';
 
 const ScreenB = ({navigation, route}) => {
   const {id, name} = route.params;
@@ -19,7 +20,7 @@ const ScreenB = ({navigation, route}) => {
   return (
     <View style={styles.body}>
       <Text>Screen B</Text>
-      <Text>
+      <Text style={[GlobalStyles.text, styles.text]}>
         id : {id} name : {name}
       </Text>
       <Pressable
@@ -36,6 +37,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 10,
+  },
+  text: {
+    fontSize: 30,
   },
 });
 

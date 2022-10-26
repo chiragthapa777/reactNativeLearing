@@ -15,7 +15,7 @@ import {
   Image,
 } from 'react-native';
 
-import {Form} from './components/Form';
+import {Form} from '../components/Form';
 
 const App = () => {
   const [name, setname] = useState('');

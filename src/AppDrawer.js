@@ -9,8 +9,9 @@ import {
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
-import ScreenA from './components/ScreenA';
-import ScreenB from './components/ScreenB';
+import ScreenA from './screens/ScreenA';
+import ScreenB from './screens/ScreenB';
+import Login from './screens/Login';
 
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
@@ -72,6 +73,20 @@ const AppDrawer = () => {
             ),
           }}
           initialParams={{id: 1, name: 'from drawer'}}
+        />
+        <Drawer.Screen
+          name="Login"
+          component={Login}
+          options={{
+            title: 'Login',
+            drawerIcon: ({focused}) => (
+              <MaterialCommunityIcons
+                name="login"
+                size={focused ? 25 : 20}
+                color={focused ? '#0080ff' : '#999999'}
+              />
+            ),
+          }}
         />
       </Drawer.Navigator>
     </NavigationContainer>

@@ -1,1 +1,6 @@
+npm run start -> run js server by metro
+then
+npm run andriod -> run the app
+
 react-native start --reset-cache
+when new package download >cd andriod then >./gradlew clean and then run app
